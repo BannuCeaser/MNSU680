@@ -29,6 +29,7 @@
 		9E1DDFE3279FEBB7005532AB /* SalaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFD6279FEBB7005532AB /* SalaryDetailView.swift */; };
 		9E1DDFE7279FEC12005532AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFE6279FEC12005532AB /* ContentView.swift */; };
 		9E1DDFE8279FEC12005532AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFE6279FEC12005532AB /* ContentView.swift */; };
+		9E1DDFEB279FF399005532AB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9E1DDFEA279FF399005532AB /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1DDFEB279FF399005532AB /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +191,9 @@
 			dependencies = (
 			);
 			name = "MNSU-SalaryDashboard (iOS)";
+			packageProductDependencies = (
+				9E1DDFEA279FF399005532AB /* Charts */,
+			);
 			productName = "MNSU-SalaryDashboard (iOS)";
 			productReference = 9E1DDF9B279FEB80005532AB /* MNSU-SalaryDashboard.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +286,9 @@
 				Base,
 			);
 			mainGroup = 9E1DDF8E279FEB7F005532AB;
+			packageReferences = (
+				9E1DDFE9279FF399005532AB /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 9E1DDF9C279FEB80005532AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -747,6 +755,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E1DDFE9279FF399005532AB /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E1DDFEA279FF399005532AB /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E1DDFE9279FF399005532AB /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E1DDF8F279FEB7F005532AB /* Project object */;
 }
