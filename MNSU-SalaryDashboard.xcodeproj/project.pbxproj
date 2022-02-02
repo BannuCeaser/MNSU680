@@ -30,6 +30,16 @@
 		9E1DDFE7279FEC12005532AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFE6279FEC12005532AB /* ContentView.swift */; };
 		9E1DDFE8279FEC12005532AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFE6279FEC12005532AB /* ContentView.swift */; };
 		9E1DDFEB279FF399005532AB /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9E1DDFEA279FF399005532AB /* Charts */; };
+		9E1DDFF127AB31C1005532AB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF027AB31C1005532AB /* DetailView.swift */; };
+		9E1DDFF227AB31C1005532AB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF027AB31C1005532AB /* DetailView.swift */; };
+		9E1DDFF427AB31D5005532AB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF327AB31D5005532AB /* DetailsViewModel.swift */; };
+		9E1DDFF527AB31D5005532AB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF327AB31D5005532AB /* DetailsViewModel.swift */; };
+		9E1DDFF727AB3207005532AB /* SearchPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF627AB3207005532AB /* SearchPicker.swift */; };
+		9E1DDFF827AB3207005532AB /* SearchPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFF627AB3207005532AB /* SearchPicker.swift */; };
+		9E1DDFFD27AB328A005532AB /* SalaryStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFFC27AB328A005532AB /* SalaryStatisticsView.swift */; };
+		9E1DDFFE27AB328A005532AB /* SalaryStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFFC27AB328A005532AB /* SalaryStatisticsView.swift */; };
+		9E1DE00027AB3295005532AB /* EmployeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFFF27AB3295005532AB /* EmployeeList.swift */; };
+		9E1DE00127AB3295005532AB /* EmployeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1DDFFF27AB3295005532AB /* EmployeeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +78,11 @@
 		9E1DDFD5279FEBB7005532AB /* salary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = salary.json; sourceTree = "<group>"; };
 		9E1DDFD6279FEBB7005532AB /* SalaryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalaryDetailView.swift; sourceTree = "<group>"; };
 		9E1DDFE6279FEC12005532AB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9E1DDFF027AB31C1005532AB /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9E1DDFF327AB31D5005532AB /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		9E1DDFF627AB3207005532AB /* SearchPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPicker.swift; sourceTree = "<group>"; };
+		9E1DDFFC27AB328A005532AB /* SalaryStatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalaryStatisticsView.swift; sourceTree = "<group>"; };
+		9E1DDFFF27AB3295005532AB /* EmployeeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +135,15 @@
 				9E1DDF94279FEB7F005532AB /* MNSU_SalaryDashboardApp.swift */,
 				9E1DDFD1279FEBB7005532AB /* Constants.swift */,
 				9E1DDFE6279FEC12005532AB /* ContentView.swift */,
+				9E1DDFF027AB31C1005532AB /* DetailView.swift */,
+				9E1DDFF327AB31D5005532AB /* DetailsViewModel.swift */,
+				9E1DDFF627AB3207005532AB /* SearchPicker.swift */,
 				9E1DDFD4279FEBB7005532AB /* Data */,
 				9E1DDFD0279FEBB7005532AB /* DataManager.swift */,
 				9E1DDFD6279FEBB7005532AB /* SalaryDetailView.swift */,
 				9E1DDFD3279FEBB7005532AB /* SalaryModel.swift */,
+				9E1DDFFC27AB328A005532AB /* SalaryStatisticsView.swift */,
+				9E1DDFFF27AB3295005532AB /* EmployeeList.swift */,
 				9E1DDFD2279FEBB7005532AB /* SalaryViewModel.swift */,
 				9E1DDF96279FEB80005532AB /* Assets.xcassets */,
 			);
@@ -342,12 +362,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1DDFDE279FEBB7005532AB /* SalaryModel.swift in Sources */,
+				9E1DE00027AB3295005532AB /* EmployeeList.swift in Sources */,
+				9E1DDFF727AB3207005532AB /* SearchPicker.swift in Sources */,
+				9E1DDFFD27AB328A005532AB /* SalaryStatisticsView.swift in Sources */,
+				9E1DDFF127AB31C1005532AB /* DetailView.swift in Sources */,
 				9E1DDFE7279FEC12005532AB /* ContentView.swift in Sources */,
 				9E1DDFD8279FEBB7005532AB /* DataManager.swift in Sources */,
 				9E1DDFDC279FEBB7005532AB /* SalaryViewModel.swift in Sources */,
 				9E1DDFBC279FEB80005532AB /* MNSU_SalaryDashboardApp.swift in Sources */,
 				9E1DDFDA279FEBB7005532AB /* Constants.swift in Sources */,
 				9E1DDFE2279FEBB7005532AB /* SalaryDetailView.swift in Sources */,
+				9E1DDFF427AB31D5005532AB /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,12 +381,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1DDFDF279FEBB7005532AB /* SalaryModel.swift in Sources */,
+				9E1DE00127AB3295005532AB /* EmployeeList.swift in Sources */,
+				9E1DDFF827AB3207005532AB /* SearchPicker.swift in Sources */,
+				9E1DDFFE27AB328A005532AB /* SalaryStatisticsView.swift in Sources */,
+				9E1DDFF227AB31C1005532AB /* DetailView.swift in Sources */,
 				9E1DDFE8279FEC12005532AB /* ContentView.swift in Sources */,
 				9E1DDFD9279FEBB7005532AB /* DataManager.swift in Sources */,
 				9E1DDFDD279FEBB7005532AB /* SalaryViewModel.swift in Sources */,
 				9E1DDFBD279FEB80005532AB /* MNSU_SalaryDashboardApp.swift in Sources */,
 				9E1DDFDB279FEBB7005532AB /* Constants.swift in Sources */,
 				9E1DDFE3279FEBB7005532AB /* SalaryDetailView.swift in Sources */,
+				9E1DDFF527AB31D5005532AB /* DetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

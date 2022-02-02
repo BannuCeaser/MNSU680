@@ -9,6 +9,6 @@ import Foundation
 
 struct DataManager {
     static func getSalaryModel(from fileName: String) -> SalaryModel? {
-       return SalaryModel.loadFromFile(fileName: Constatns.jsonFileName)
+       return SalaryModel.loadFromFile(fileName: Constants.jsonFileName)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let viewModel = SalaryViewModel(model: DataManager.getSalaryModel(from: Constatns.jsonFileName) ?? SalaryModel(data: nil))
+    let viewModel = SalaryViewModel(model: DataManager.getSalaryModel(from: Constants.jsonFileName) ?? SalaryModel(data: nil))
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     let ySearchBar: CGFloat = 40
@@ -49,11 +49,14 @@ struct ContentView: View {
                             ForEach(self.viewModel.getSearchList(choice: searchChoice, sortBy: sortBY)?.filter {
                                 self.searchText.isEmpty ? true : $0.lowercased().contains(self.searchText.lowercased())
                             } ?? ["dummy dept"], id: \.self) { row in
-                                HStack {
-                                    Text(row).foregroundColor(.blue)
-                                    Spacer()
-                                    Text(">").foregroundColor(.blue).fontWeight(.bold).padding(20)
-                                }
+                                NavigationLink<HStack<TupleView<(Text, Spacer)>>, DetailView> {
+                                    DetailView(selectedRow: viewModel.getSelected(serachChoice: searchChoice, rowItem: row))
+                                                } label: {
+                                                    HStack {
+                                                        Text(row).foregroundColor(.blue)
+                                                        Spacer()
+                                                    }
+                                                }
                                 
                                 
                             }

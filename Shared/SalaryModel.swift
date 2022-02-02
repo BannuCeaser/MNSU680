@@ -6,10 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 // MARK: - Model
 struct SalaryModel: Codable {
     let data: [Datum]?
+}
+
+extension Array where Element == Datum {
+    
 }
 
 // MARK: - Datum
@@ -22,7 +27,7 @@ struct Datum: Codable {
     let payYearly, payYtd: Double
     let tenured: String?
     let lastName, firstName: String
-
+    
     enum CodingKeys: String, CodingKey {
         case rndID = "RND_ID"
         case startDate = "START_DATE"
@@ -56,7 +61,7 @@ enum StartDate: Codable {
     case integer(Int)
     case string(String)
     case null
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let x = try? container.decode(Int.self) {
@@ -73,7 +78,7 @@ enum StartDate: Codable {
         }
         throw DecodingError.typeMismatch(StartDate.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for StartDate"))
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
         switch self {
@@ -85,6 +90,11 @@ enum StartDate: Codable {
             try container.encodeNil()
         }
     }
+}
+
+protocol UniversitySubSection {
+    var id: String { get set}
+    var employees: [Employee] { get set }
 }
 
 extension SalaryModel {
@@ -106,4 +116,50 @@ extension SalaryModel {
         
         return SalaryModel(data: nil)
     }
+    
+    func getDetails(for name: String, type: SearchByType) -> UniversitySubSection {
+        var empList: [Employee] = []
+        
+        for empItem in data! {
+            let emp = Employee(id: empItem.rndID, firstName: empItem.firstName, lastName: empItem.lastName, jobTitle: empItem.jobTitle, yearlyPay: empItem.payYearly, pay_ytd: empItem.payYtd, dept: empItem.department, clg: empItem.college)
+            empList.append(emp)
+        }
+        
+        switch type {
+        case .department:
+            let deptEmployees = empList.filter { $0.dept.lowercased() == name.lowercased() }
+            return DepartmentDetails(id: name, employees: deptEmployees)
+        case .college:
+            let clgEmployees = empList.filter { $0.clg.lowercased() == name.lowercased() }
+            return CollegeDetails(id: name, employees: clgEmployees)
+        }
+    }
+}
+
+struct DepartmentDetails: UniversitySubSection {
+    var id: String
+    var employees: [Employee]
+}
+
+struct CollegeDetails: UniversitySubSection {
+    var id: String
+    var employees: [Employee]
+}
+
+struct Employee: Codable, Hashable {
+    var id: String
+    var firstName: String
+    var lastName: String
+    var jobTitle: String
+    var yearlyPay: Double
+    var pay_ytd: Double
+    var dept: String
+    var clg: String
+}
+
+struct StatisticsData {
+    var average: Double
+    var median: Double
+    var minSalary: Double
+    var maxSalary: Double
 }

@@ -7,9 +7,8 @@
 
 import Foundation
 
-enum Constatns {
+enum Constants {
     static let jsonFileName = "salary"
     static let searchDeptPlaceholder = "Search for Department"
     static let searchCollagePlaceholder = "Search for Collage"
-    
 }

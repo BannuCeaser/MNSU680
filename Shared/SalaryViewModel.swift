@@ -18,9 +18,9 @@ class SalaryViewModel: ObservableObject {
     func getPlaceholder(searchChoice: SearchByType) -> String {
         switch searchChoice {
         case .department:
-            return Constatns.searchDeptPlaceholder
+            return Constants.searchDeptPlaceholder
         case .college:
-            return Constatns.searchCollagePlaceholder
+            return Constants.searchCollagePlaceholder
         }
     }
     
@@ -47,6 +47,15 @@ class SalaryViewModel: ObservableObject {
             }
         }
     }
+    
+    func getSelected(serachChoice: SearchByType, rowItem: String) -> UniversitySubSection {
+        switch serachChoice {
+        case .department:
+            return model.getDetails(for: rowItem, type: .department)
+        case .college:
+            return model.getDetails(for: rowItem, type: .college)
+        }
+    }
 }
 
 extension Sequence where Element: Hashable {
@@ -65,9 +74,9 @@ enum SearchByType: String, CaseIterable, Identifiable {
     var placehoderString: String {
         switch self {
         case .department:
-            return Constatns.searchDeptPlaceholder
+            return Constants.searchDeptPlaceholder
         case .college:
-            return Constatns.searchCollagePlaceholder
+            return Constants.searchCollagePlaceholder
         }
     }
 }
